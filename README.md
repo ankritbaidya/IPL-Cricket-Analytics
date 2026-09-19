@@ -248,24 +248,18 @@ A few of the resulting charts, for a quick look without running anything:
 
 ## How to run
 
-1. **The data's already here.** This copy of the project ships with the real
-   `matches.csv` and `deliveries.csv` already in `data/` — you can skip
-   straight to step 2. If you're starting from a fresh clone instead (`data/`
-   is gitignored on purpose, see [`data/README.md`](data/README.md)), follow
-   that file's download link first (free Kaggle account, ~2 minutes).
+1. **Download the dataset.** The raw `matches.csv` and        `deliveries.csv` files are intentionally excluded from GitHub because they are large source files. See [`data/README.md`]  (data/README.md) for the dataset download instructions.
 2. **Python environment:**
-   ```bash
+   ```powershell
    python -m venv venv
-   source venv/bin/activate        # Windows: venv\Scripts\activate
-   pip install -r requirements.txt
+   venv\Scripts\Activate.ps1
+   pip install -r requirements.txt 
    ```
-3. **Run the analysis:**
-   ```bash
+3.**Run the analysis:**
+   ```powershell
    cd python
-   python ipl_analysis.py --data-dir ../data --out-dir ../outputs
+   python ipl_analysis.py --data-dir ..\data --out-dir ..\outputs
    ```
-   This prints the inspection/insight summary to the console and writes
-   `outputs/tables/*.csv`, `outputs/images/*.png`, and `outputs/insights.txt`.
 4. **Notebook version (optional, for the narrative walkthrough):**
    ```bash
    jupyter notebook notebooks/IPL_Analysis.ipynb
